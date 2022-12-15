@@ -1,8 +1,15 @@
 import React from "react";
+import Navbar from "../Pages/Navbar";
+import CaptionCarousel from "../Pages/Swiper";
+
 function Home(){
     return (
+      <>
+        <Navbar/>
+        <CaptionCarousel/>
+        
+      </>
       
-        <h1>Home Page</h1>
         
     )
 }
