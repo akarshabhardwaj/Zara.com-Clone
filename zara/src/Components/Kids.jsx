@@ -1,4 +1,7 @@
 import React from "react";
+import Navbar from "../Pages/Navbar";
+import {SimpleGrid} from "@chakra-ui/react"
+
 let kids = [
     {
         id: 1,
@@ -271,9 +274,86 @@ let kids = [
         star: 3
     },
 ]
+
+const styles={
+    width:"100%",
+    margin:"auto",
+    border:"2px solid black",
+    padding:"45px",
+
+backgroundColor:"grey"
+}
 function Kids(){
+    function DisplayData(){
     return (
-        <h1>KIDS PAGE</h1>
+        <div style={styles}>
+           
+             
+        <SimpleGrid  columns={{base:1,md:3,'2xl':4}} spacing={25}>
+{kids.map((el)=>{
+return (
+<div style={{boxShadow:" rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",borderRadius:"15px",padding:"10px",backgroundColor:"white"}} key={el.id}>
+<img  src={el.image} alt={el.cate} />
+<h3>{el.name}</h3>
+<h4>{el.price}</h4>
+<button onClick={()=>{AddToCart(el)}} style={{backgroundColor:"black",color:"white",padding:"4px",borderRadius:"5px"}}>Add To Cart</button>
+</div>
+)
+})}
+</SimpleGrid>
+<h1>MENS PAGE</h1>
+</div>
+    )
+}
+
+let cartArray=JSON.parse(localStorage.getItem("Cart"))||[]
+const AddToCart=(el)=>{
+cartArray.push(el)
+localStorage.setItem("Cart",JSON.stringify(cartArray))
+}
+
+    const sortData=()=>{
+        kids=kids.sort(function(a,b){
+            return a.price-b.price
+        })
+        
+       console.log(kids)
+    }
+    const sortDatahtl=()=>{
+        kids=kids.sort(function(a,b){
+            return b.price-a.price
+        })
+       console.log(kids)
+    }
+   
+    // console.log(data)
+    return (<>
+        
+        <Navbar/>
+        <div style={{width:"30%",margin:"auto",border:"0px solid red",display:"flex",justifyContent:"space-between"}}>
+        <button style={{backgroundColor:"black",color:"white",padding:"4px"}} onClick={sortData}>Sort Low To High</button>
+        <button style={{backgroundColor:"black",color:"white",padding:"4px"}} onClick={sortDatahtl}>Sort High To Low</button>
+        </div>
+        
+       <DisplayData/>
+        {/* <div style={styles}>
+           
+             
+             <SimpleGrid  columns={{base:1,md:3,'2xl':4}} spacing={25}>
+{mens.map((el)=>{
+    return (
+ <div style={{boxShadow:" rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",borderRadius:"15px",padding:"10px",backgroundColor:"white"}} key={el.id}>
+ <img  src={el.image} alt={el.cate} />
+ <h3>{el.name}</h3>
+ <h4>{el.price}</h4>
+ <button>Add To Cart</button>
+ </div>
+    )
+})}
+</SimpleGrid>
+  <h1>MENS PAGE</h1>
+  </div> */}
+  </>  
     )
 }
 export default Kids
