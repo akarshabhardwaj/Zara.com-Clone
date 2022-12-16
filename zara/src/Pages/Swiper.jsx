@@ -7,11 +7,13 @@ import {
   Heading,
   Text,
   Container,
+  Flex,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
+import {Link as RouterLink} from "react-router-dom"
 
 // Settings for the slider
 const settings = {
@@ -25,6 +27,8 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 };
+
+const styles={fontSize:"25px",color:"black",fontWeight:"900"}
 
 export default function CaptionCarousel() {
   // As we have used custom buttons, we need a reference variable to
@@ -87,7 +91,7 @@ export default function CaptionCarousel() {
   return (
     <Box
       position={'relative'}
-      height={'600px'}
+      height={'700px'}
       width={'full'}
       overflow={'hidden'}>
       {/* CSS files for react-slick */}
@@ -152,10 +156,20 @@ export default function CaptionCarousel() {
                 <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
                   {card.text}
                 </Text>
+                
               </Stack>
+              
             </Container>
+            <Box width="100%" style={styles}>
+                <Flex alignItems="center" margin="auto" justifyContent="space-around">
+            <RouterLink to="/men"><h2>MEN</h2></RouterLink>
+            <RouterLink to="/women" ><h2>WOMEN</h2></RouterLink>
+            <RouterLink to="/kids" ><h2>KIDS</h2></RouterLink>
+            </Flex>
+        </Box>
           </Box>
         ))}
+        
       </Slider>
     </Box>
   );
