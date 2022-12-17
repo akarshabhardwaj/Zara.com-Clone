@@ -2,323 +2,6 @@ import React from "react";
 import Navbar from "../Pages/Navbar";
 import {SimpleGrid} from "@chakra-ui/react"
 
-let Womens = [
-    {
-        id: 1,
-        cate: 'Jacket',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1940910025.jpg?plain&size=400x400',
-        name: 'Cutter & Buck Ladies CB DryTec Edge Full Zip Jacket',
-        price: 8000,
-        shipping: 'Sold by Cutter & Buck',
-        star: 3
-    },
-    {
-        id: 2,
-        cate: 'Jacket',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1940910016.jpg?plain&size=400x400',
-        name: 'Cutter & Buck Ladies CB DryTec Edge Full Zip Jacke',
-        price: 3600,
-        shipping: 'Sold by Cutter & Buck',
-        star: 4
-    },
-    {
-        id: 3,
-        cate: 'Jacket',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1940909972.jpg?plain&size=400x400',
-        name: 'Clique Ladies Stora Jacket ',
-        price: 6000,
-        shipping: 'Sold by Cutter & Buck',
-        star: 4
-    },
-    {
-        id: 4,
-        cate: 'Jacket',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1940910044.jpg?plain&size=400x400',
-        name: 'Clique Helsa Sport Colorblock Lady Full Zip Jacket',
-        price: 4300,
-        shipping: 'Sold by Cutter & Buck',
-        star: 3
-    },
-    {
-        id: 5,
-        cate: 'Jacket',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1939500299.jpg?plain&size=400x400',
-        name: 'Altitude Quilted Jacket',
-        price: 16400,
-        shipping: 'Sold by Cutter & Buck',
-        star: 4
-    },
-    {
-        id: 6,
-        cate: 'Jacket',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1940910047.jpg?plain&size=400x400',
-        name: 'Clique Ladies Kingsland Jacket',
-        price: 5800,
-        shipping: 'Sold by Cutter & Buck',
-        star: 3
-    },
-    {
-        id: 7,
-        cate: 'Jeans',
-        image: 'https://img.shop.com/Image/270000/273200/273200/products/1935901540.jpg?plain&size=400x400',
-        name: 'PINKO Womens Sabrina Destroyed Raw Hem Skinny Jeans',
-        price: 5600,
-        shipping: 'Sold by Ranch and Home',
-        star: 3
-    },
-    {
-        id: 8,
-        cate: 'Jeans',
-        image: 'https://img.shop.com/Image/290000/292000/292019/products/1932761893.jpg?plain&size=400x400',
-        name: 'Cowgirl Tuff Western Jeans Womens Breathe Bootcut Relax Light JBRL',
-        price: 8100,
-        shipping: 'Sold by LUX LAIR',
-        star: 3
-    },
-    {
-        id: 9,
-        cate: 'Jeans',
-        image: 'https://img.shop.com/Image/290000/292000/292019/products/1932761210.jpg?plain&size=400x400',
-        name: 'CBUK Mens Swish Full-Zip Jeans',
-        price: 6400,
-        shipping: 'Sold by Cutter & Buck',
-        star: 3
-    },
-    {
-        id: 10,
-        cate: 'Jeans',
-        image: 'https://img.shop.com/Image/270000/278100/278132/products/1936329597.jpg?plain&size=400x400',
-        name: 'Cowgirl Tuff Western Bib Overall Women Fleece Lined Winter Dark JTWBI',
-        price: 7900,
-        shipping: 'Sold by BOBBI + BRICKA',
-        star: 3
-    },
-    {
-        id: 11,
-        cate: 'Jeans',
-        image: 'https://img.shop.com/Image/270000/273200/273200/products/1921892767.jpg?plain&size=400x400',
-        name: 'LEVIS Womens Blue Straight Leg, Classic Fit Denim Jeans',
-        price: 2400,
-        shipping: 'Sold by BOBBI + BRICKA',
-        star: 3
-    },
-    {
-        id: 12,
-        cate: 'Jeans',
-        image: 'https://img.shop.com/Image/270000/273200/273200/products/1935600568.jpg?plain&size=400x400',
-        name: 'LEVIS Womens Blue Straight Leg, Classic Fit Denim Jeans',
-        price: 4800,
-        shipping: 'Sold by JC Penny',
-        star: 4
-    },
-    {
-        id: 13,
-        cate: 'Jeans',
-        image: 'https://img.shop.com/Image/280000/285800/285857/products/1939697102.jpg?plain&size=400x400',
-        name: 'CBUK Womens Swish Full-Zip jacket',
-        price: 4400,
-        shipping: 'Sold by Cutter & Buck',
-        star: 1
-    },
-    {
-        id: 14,
-        cate: 'Jeans',
-        image: 'https://img.shop.com/Image/240000/245300/245346/products/1900553453.jpg?plain&size=400x400',
-        name: 'True Religion Womens Tony Denim Destory Skinny Jeans',
-        price: 1600,
-        shipping: 'Sold by BHFO',
-        star: 2
-    },
-    {
-        id: 15,
-        cate: 'Shirt',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1943601108.jpg?plain&size=400x400',
-        name: 'Cutter & Buck Womens Big & Tall CB DryTec Northgate Polo Shirt',
-        price: 2000,
-        shipping: 'Sold by Cutter and Buck',
-        star: 3
-    },
-    {
-        id: 16,
-        cate: 'Shirt',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1940910038.jpg?plain&size=400x400',
-        name: 'Cutter & Buck Womens Big & Tall CB DryTec Northgate Polo Shirt',
-        price: 8000,
-        shipping: 'Sold by Cutter and Buck',
-        star: 3
-    },
-    {
-        id: 17,
-        cate: 'Shirt',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1939530742.jpg?plain&size=400x400',
-        name: 'Cutter & Buck Versatech Multi Check Stretch Womens Big and Tall',
-        price: 7500,
-        shipping: 'Sold by BHFO',
-        star: 2
-    },
-    {
-        id: 18,
-        cate: 'Shirt',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1940910014.jpg?plain&size=400x400',
-        name: 'True Religion Womens Tony Denim Destory Skinny Shirt',
-        price: 7800,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 19,
-        cate: 'Shirt',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1940909963.jpg?plain&size=400x400',
-        name: 'True Religion Womens Tony Denim Destory Skinny Shirt',
-        price: 1600,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 20,
-        cate: 'Shirt',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1951836745.jpg?plain&size=400x400',
-        name: 'True Religion Womens Tony Denim Destory Skinny Shirt',
-        price: 6600,
-        shipping: 'Sold by BHFO',
-        star: 5
-    },
-    {
-        id: 21,
-        cate: 'Shirt',
-        image: 'https://img.shop.com/Image/290000/291600/291696/products/1951836750.jpg?plain&size=400x400',
-        name: 'True Religion Womens Tony Pink Destory Skinny Shirt',
-        price: 1600,
-        shipping: 'Sold by BHFO',
-        star: 1
-    },
-    {
-        id: 22,
-        cate: 'Suit',
-        image: 'https://img.shop.com/Image/260000/264900/264928/products/1901073237.jpg?plain&size=400x400',
-        name: 'Le Suit Womens Petite Pleated-Hem Skirt Suit ',
-        price: 20000,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 23,
-        cate: 'Suit',
-        image: 'https://img.shop.com/Image/260000/264900/264928/products/1793404153.jpg?plain&size=400x400',
-        name: 'Womens Burgundy Le Suit Womens Petite Pleated-Hem Skirt Suit ',
-        price: 16000,
-        shipping: 'Sold by BHFO',
-        star: 3
-    },
-    {
-        id: 24,
-        cate: 'Suit',
-        image: 'https://img.shop.com/Image/250000/252500/252590/products/1871750233.jpg?plain&size=400x400',
-        name: 'Womens Belted Wool Look Blazer - Brown - 1',
-        price: 14400,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 25,
-        cate: 'Suit',
-        image: 'https://img.shop.com/Image/250000/252500/252590/products/1865702130.jpg?plain&size=400x400',
-        name: 'Womens Belted Wool Look Blazer - Black - 88',
-        price: 2100,
-        shipping: 'Sold by BHFO',
-        star: 3
-    },
-    {
-        id: 26,
-        cate: 'Suit',
-        image: 'https://img.shop.com/Image/240000/248200/248295/products/1905294173.jpg?plain&size=400x400',
-        name: 'Club Monaco Fashion Blazer',
-        price: 26000,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 27,
-        cate: 'Suit',
-        image: 'https://img.shop.com/Image/270000/278100/278132/products/1923609965.jpg?plain&size=400x400',
-        name: 'Club Monaco Fashion Blazer',
-        price: 13600,
-        shipping: 'Sold by BHFO',
-        star: 1
-    },
-    {
-        id: 28,
-        cate: 'Sweater',
-        image: 'https://img.shop.com/Image/250000/253200/253251/products/1938914710.jpg?plain&size=400x400',
-        name: 'Buffalo David Bitton Womens Wacam Pullover Sweater, Style',
-        price: 3500,
-        shipping: 'Sold by BHFO',
-        star: 2
-    },
-    {
-        id: 29,
-        cate: 'Sweater',
-        image: 'https://img.shop.com/Image/260000/269300/269358/products/1909824272.jpg?plain&size=400x400',
-        name: 'DC Comics Superman and Supergirl Symbol Crop Top Sweater',
-        price: 2600,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 30,
-        cate: 'Sweater',
-        image: 'https://img.shop.com/Image/270000/273200/273200/products/1932139463.jpg?plain&size=400x400',
-        name: 'BB Dakota by Steve Madden Womens Knit Right In V-Neck Cardigan Sweater',
-        price: 1000,
-        shipping: 'Sold by BHFO',
-        star: 2
-    },
-    {
-        id: 31,
-        cate: 'Sweater',
-        image: 'https://img.shop.com/Image/240000/243400/243406/products/1944335527.jpg?plain&size=400x400',
-        name: 'Karen Scott Petite Curved-Hem Neps Pullover Sweater, Created for Macys ',
-        price: 3500,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 32,
-        cate: 'Sweater',
-        image: 'https://img.shop.com/Image/270000/273200/273200/products/1871424805.jpg?plain&size=400x400',
-        name: 'Diane Von Furstenberg Womens Jess Ribbed Lightweight Crewneck Sweater',
-        price: 1560,
-        shipping: 'Sold by BHFO',
-        star: 3
-    },
-    {
-        id: 33,
-        cate: 'Sweater',
-        image: 'https://img.shop.com/Image/280000/288000/288080/products/1894373587.jpg?plain&size=400x400',
-        name: 'Leopard Cardigan Top Quality Women ',
-        price: 4800,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 34,
-        cate: 'Sweater',
-        image: 'https://img.shop.com/Image/240000/243400/243406/products/1922848179.jpg?plain&size=400x400',
-        name: 'BRoxy Juniors Faraway Shades Pullover Sweater',
-        price: 13200,
-        shipping: 'Sold by BHFO',
-        star: 4
-    },
-    {
-        id: 35,
-        cate: 'Sweater',
-        image: 'https://img.shop.com/Image/280000/288000/288080/products/1892927825.jpg?plain&size=400x400',
-        name: 'Draped Cardigan - Navy Top Quality Women',
-        price: 1320,
-        shipping: 'Sold by BHFO',
-        star: 2
-    }
-] 
 
     
 const styles={
@@ -329,27 +12,28 @@ const styles={
 backgroundColor:"grey"
 }
 function Women(){
-    function DisplayData(){
-    return (
-        <div style={styles}>
-           
-             
-        <SimpleGrid  columns={{base:1,md:3,'2xl':4}} spacing={25}>
-{Womens.map((el)=>{
-return (
-<div style={{boxShadow:" rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",borderRadius:"15px",padding:"10px",backgroundColor:"white"}} key={el.id}>
-<img  src={el.image} alt={el.cate} />
-<h3>{el.name}</h3>
-<h4>{el.price}</h4>
-<button onClick={()=>{AddToCart(el)}} style={{backgroundColor:"black",color:"white",padding:"4px",borderRadius:"5px"}}>Add To Cart</button>
-</div>
-)
-})}
-</SimpleGrid>
-<h1>WOENS PAGE</h1>
-</div>
-    )
-}
+    const[data,setData]=React.useState([])
+    
+    
+    React.useEffect(()=>{
+        GetData()
+    },[])
+    
+    function GetData(){
+        fetch(" http://localhost:3004/women").then((res)=>res.json())
+        .then((res)=>setData(res))
+        .catch((error)=>console.log(error))
+    }
+    const handleSort=()=>{
+        fetch(" http://localhost:3004/womenlth").then((res)=>res.json())
+        .then((res)=>setData(res))
+        .catch((error)=>console.log(error))
+    }
+    const Sorthandle=()=>{
+        fetch(" http://localhost:3004/womenhtl").then((res)=>res.json())
+        .then((res)=>setData(res))
+        .catch((error)=>console.log(error))
+    }
 
 let cartArray=JSON.parse(localStorage.getItem("Cart"))||[]
 const AddToCart=(el)=>{
@@ -357,47 +41,34 @@ cartArray.push(el)
 localStorage.setItem("Cart",JSON.stringify(cartArray))
 }
 
-    const sortData=()=>{
-        Womens=Womens.sort(function(a,b){
-            return a.price-b.price
-        })
-        
-       console.log(Womens)
-    }
-    const sortDatahtl=()=>{
-        Womens=Womens.sort(function(a,b){
-            return b.price-a.price
-        })
-       console.log(Womens)
-    }
    
     // console.log(data)
     return (<>
         
         <Navbar/>
         <div style={{width:"30%",margin:"auto",border:"0px solid red",display:"flex",justifyContent:"space-between"}}>
-        <button style={{backgroundColor:"black",color:"white",padding:"4px"}} onClick={sortData}>Sort Low To High</button>
-        <button style={{backgroundColor:"black",color:"white",padding:"4px"}} onClick={sortDatahtl}>Sort High To Low</button>
+        <button style={{backgroundColor:"black",color:"white",padding:"4px"}} onClick={handleSort}>Sort Low To High</button>
+        <button style={{backgroundColor:"black",color:"white",padding:"4px"}} onClick={Sorthandle}>Sort High To Low</button>
         </div>
         
-       <DisplayData/>
-        {/* <div style={styles}>
+        <div style={styles}>
            
              
-             <SimpleGrid  columns={{base:1,md:3,'2xl':4}} spacing={25}>
-{mens.map((el)=>{
-    return (
- <div style={{boxShadow:" rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",borderRadius:"15px",padding:"10px",backgroundColor:"white"}} key={el.id}>
- <img  src={el.image} alt={el.cate} />
- <h3>{el.name}</h3>
- <h4>{el.price}</h4>
- <button>Add To Cart</button>
- </div>
-    )
-})}
-</SimpleGrid>
-  <h1>MENS PAGE</h1>
-  </div> */}
+           <SimpleGrid  columns={{base:1,md:3,'2xl':4}} spacing={25}>
+   {data?.map((el)=>{
+   return (
+   <div style={{boxShadow:" rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",borderRadius:"15px",padding:"10px",backgroundColor:"white"}} key={el.id}>
+   <img  src={el.image} alt={el.cate} />
+   <h3>{el.name}</h3>
+   <h4>{el.price}</h4>
+   <button onClick={()=>{AddToCart(el)}} style={{backgroundColor:"black",color:"white",padding:"4px",borderRadius:"5px"}}>Add To Cart</button>
+   </div>
+   )
+   })}
+   </SimpleGrid>
+   <h1>MENS PAGE</h1>
+   </div>
+       
   </>  
     )
 }
