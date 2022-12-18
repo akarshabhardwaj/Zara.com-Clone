@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Pages/Navbar";
 import {SimpleGrid} from "@chakra-ui/react"
 
+
     
 const styles={
     width:"100%",
@@ -20,25 +21,32 @@ function Men(){
     },[])
     
     function GetData(){
-        fetch(" http://localhost:3004/mens").then((res)=>res.json())
+        fetch(" https://zara-mock-cw.onrender.com/mens").then((res)=>res.json())
         .then((res)=>setData(res))
         .catch((error)=>console.log(error))
     }
     const handleSort=()=>{
-        fetch(" http://localhost:3004/menlth").then((res)=>res.json())
+        fetch("https://zara-mock-cw.onrender.com/menlth").then((res)=>res.json())
         .then((res)=>setData(res))
         .catch((error)=>console.log(error))
     }
     const Sorthandle=()=>{
-        fetch(" http://localhost:3004/menhtl").then((res)=>res.json())
+        fetch("https://zara-mock-cw.onrender.com/menhtl").then((res)=>res.json())
         .then((res)=>setData(res))
         .catch((error)=>console.log(error))
     }
-let cartArray=JSON.parse(localStorage.getItem("Cart"))||[]
-const AddToCart=(el)=>{
-cartArray.push(el)
-localStorage.setItem("Cart",JSON.stringify(cartArray))
-}
+
+    const AddToCart=async (el)=>{
+        console.log(el)
+        let req=await fetch(`https://zara-mock-cw.onrender.com/cart`,{
+            method:"POST",
+            body:JSON.stringify(el),
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+        
+    }
 
    
     // console.log(data)

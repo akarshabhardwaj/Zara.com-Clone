@@ -1,10 +1,12 @@
 import { Box ,Flex} from '@chakra-ui/react'
 import {Link as RouterLink} from "react-router-dom"
 import {FaCartPlus} from "react-icons/fa"
+import React from 'react'
+let total=0;
+function Navbar(props){
 
-
-function Navbar(){
-
+  console.log(props)
+ 
 
 return(
     <div>
@@ -13,7 +15,7 @@ return(
 <Box bg='transparent' w='100%' p={0} color='black' border={"1px solid black"}>
 <div style={{display:"flex",justifyContent:"space-around"}}>
   <RouterLink to="/" > <img  src='https://1000logos.net/wp-content/uploads/2017/05/Zara-Emblem.png' alt='zara' style={{width:"30%",padding:"5px"}}/></RouterLink>
-  <RouterLink to="/cart"><FaCartPlus style={{width:"500px",margin:"auto",marginTop:"7px"}}/></RouterLink>
+  <RouterLink to="/cart"><FaCartPlus style={{width:"500px",margin:"auto",marginTop:"7px"}}/><span>{props.tota}{"----"}{props.sum}</span></RouterLink>
   </div>
 </Box>
 

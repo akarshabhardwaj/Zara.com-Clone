@@ -20,26 +20,31 @@ function Women(){
     },[])
     
     function GetData(){
-        fetch(" http://localhost:3004/women").then((res)=>res.json())
+        fetch("https://zara-mock-cw.onrender.com/women").then((res)=>res.json())
         .then((res)=>setData(res))
         .catch((error)=>console.log(error))
     }
     const handleSort=()=>{
-        fetch(" http://localhost:3004/womenlth").then((res)=>res.json())
+        fetch("https://zara-mock-cw.onrender.com/womenlth").then((res)=>res.json())
         .then((res)=>setData(res))
         .catch((error)=>console.log(error))
     }
     const Sorthandle=()=>{
-        fetch(" http://localhost:3004/womenhtl").then((res)=>res.json())
+        fetch("https://zara-mock-cw.onrender.com/womenhtl").then((res)=>res.json())
         .then((res)=>setData(res))
         .catch((error)=>console.log(error))
     }
 
-let cartArray=JSON.parse(localStorage.getItem("Cart"))||[]
-const AddToCart=(el)=>{
-cartArray.push(el)
-localStorage.setItem("Cart",JSON.stringify(cartArray))
-}
+    const AddToCart=async (el)=>{
+        console.log(el)
+        let req=await fetch(`https://zara-mock-cw.onrender.com/cart`,{
+            method:"POST",
+            body:JSON.stringify(el),
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+    }
 
    
     // console.log(data)

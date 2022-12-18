@@ -7,6 +7,7 @@ import Home from "../Components/Home";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
 import Cart from "../Components/Cart"
+import Checkout from "../Pages/Checkout";
 
 function AllRoutes(){
     return (
@@ -18,6 +19,7 @@ function AllRoutes(){
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register/>} />
             <Route path="/cart" element={<Cart/>} />
+            <Route path="/checkout" element={<Checkout/>} />
         </Routes>
     )
 }
