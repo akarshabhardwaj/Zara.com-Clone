@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Pages/Navbar";
 import {SimpleGrid} from "@chakra-ui/react"
-
+import LargeWithAppLinksAndSocial from "./Footer";
 
     
 const styles={
@@ -73,9 +73,9 @@ function Men(){
    )
    })}
    </SimpleGrid>
-   <h1>MENS PAGE</h1>
+   <h1>LOADING .....</h1>
    </div>
-       
+       <LargeWithAppLinksAndSocial/>
   </>  
     )
 }
