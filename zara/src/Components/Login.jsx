@@ -73,7 +73,7 @@ let flag=false;
                   direction={{ base: 'column', sm: 'row' }}
                   align={'start'}
                   justify={'space-between'}>
-                  <Checkbox>Remember me</Checkbox>
+                  <Checkbox>I agree to T&C of the websites</Checkbox>
                   <Link color={'blue.400'}>Forgot password?</Link>
                 </Stack>
              <RouterLink  to="/" >

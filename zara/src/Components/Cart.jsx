@@ -41,6 +41,7 @@ let res=await fetch(`https://zara-mock-cw.onrender.com/cart/${id}`,{
         'Content-Type':'application/json'
     }
 })
+alert("Successfully removed")
 // setData(res.json())
 fetch("https://zara-mock-cw.onrender.com/cart").then((res)=>res.json())
 .then((res)=>setData(res))
@@ -52,8 +53,9 @@ for(let i=0;i<data.length;i++){
 }
 
     return (<>
+        {/* sum={sum} tota={data.length} */}
+        <Navbar />
         
-        <Navbar sum={sum} tota={data.length}/>
     <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",backgroundColor:"black"}}>
         <RouterLink to="/checkout" > <button style={btn}>Procced Checkout</button></RouterLink>    
        <h1 style={{fontSize:"35px",backgroundColor:"black",color:"white"}}>Total Price:{"   "}{sum}</h1>
@@ -77,6 +79,7 @@ for(let i=0;i<data.length;i++){
    </SimpleGrid>
   
    </div>
+   <h1>Loading ...</h1>
        
   </>  
     )

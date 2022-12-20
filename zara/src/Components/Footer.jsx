@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-
+import { ReactNode } from 'react'
+import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
   Container,
@@ -51,7 +51,7 @@ export default function LargeWithLogoLeft() {
               <Logo color={useColorModeValue('gray.700', 'white')} />
             </Box>
             <Text fontSize={'sm'}>
-                <img width="100px" src="https://1000logos.net/wp-content/uploads/2017/05/Zara-Emblem.png" alt="zara" />
+       <RouterLink to="/"><img width="100px" src="https://1000logos.net/wp-content/uploads/2017/05/Zara-Emblem.png" alt="zara" /></RouterLink>         
               © Zara stay and flex in style
             </Text>
           </Stack>

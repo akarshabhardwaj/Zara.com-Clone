@@ -45,7 +45,7 @@ function Men(){
                 'Content-Type':'application/json'
             }
         })
-        
+        alert("sucessfully added to cart")
     }
 
    
