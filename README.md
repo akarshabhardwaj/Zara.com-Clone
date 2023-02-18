@@ -11,7 +11,7 @@ Visit : https://brilliant-stardust-f77529.netlify.app/
 
 ## Languages Used
 
-Zara webiste looks very amazing and introduced with various type of languages like JavaScript, HTML, CSS etc. There are the some important details regarding with this project which is mentioned below:
+Zara webiste looks very amazing and introduced with various type of languages like JavaScript, HTML, CSS , React Js , RenderIo etc. There are the some important details regarding with this project which is mentioned below:
 
 <ul dir="auto">
  <ol dir="auto">◉ JavaScript : 91.6%</ol>
